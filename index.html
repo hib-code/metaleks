@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metaleks — Art métal animé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <div class="logo">METALEKS</div>
+        <a href="#configurateur" class="btn btn-outline">Personnaliser</a>
+      </nav>
+
+      <div class="hero-content container">
+        <p class="tag">Design métal pour les jeunes</p>
+        <h1>Des tableaux métal qui bougent avec ton style.</h1>
+        <p class="subtitle">
+          Choisis ton univers animé, tes couleurs et ta finition. Chez Metaleks,
+          chaque tableau est fabriqué sur mesure pour ton espace.
+        </p>
+        <div class="hero-actions">
+          <a href="#collections" class="btn">Voir les collections</a>
+          <a href="#configurateur" class="btn btn-outline">Créer le mien</a>
+        </div>
+      </div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </header>
+
+    <main>
+      <section id="collections" class="section container">
+        <div class="section-title">
+          <h2>Collections animées</h2>
+          <p>Inspirées des univers que les jeunes adorent.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Néo Tokyo</h3>
+            <p>
+              Lignes dynamiques, néons et ambiance futuriste en découpe métal.
+            </p>
+            <span class="badge">Best-seller</span>
+          </article>
+          <article class="card">
+            <h3>Héros Légendaires</h3>
+            <p>
+              Silhouettes puissantes, style manga et effet profondeur sur mur.
+            </p>
+            <span class="badge">Nouveau</span>
+          </article>
+          <article class="card">
+            <h3>Street Motion</h3>
+            <p>
+              Énergie urbaine, formes rapides et vibes e-sport pour une chambre
+              unique.
+            </p>
+            <span class="badge">Édition jeune</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="configurateur" class="section configurator container">
+        <div class="section-title">
+          <h2>Personnalise ton tableau</h2>
+          <p>Prévisualise ton design avant fabrication.</p>
+        </div>
+
+        <div class="config-layout">
+          <form class="config-form" id="configForm">
+            <label>
+              Univers
+              <select id="themeSelect">
+                <option value="Néo Tokyo">Néo Tokyo</option>
+                <option value="Héros Légendaires">Héros Légendaires</option>
+                <option value="Street Motion">Street Motion</option>
+              </select>
+            </label>
+
+            <label>
+              Taille
+              <select id="sizeSelect">
+                <option value="60 x 40 cm">60 x 40 cm</option>
+                <option value="80 x 60 cm">80 x 60 cm</option>
+                <option value="120 x 80 cm">120 x 80 cm</option>
+              </select>
+            </label>
+
+            <label>
+              Couleur principale
+              <input type="color" id="colorInput" value="#39ffb6" />
+            </label>
+
+            <label>
+              Message (optionnel)
+              <input
+                type="text"
+                id="messageInput"
+                placeholder="Ex: Team Shadow"
+                maxlength="26"
+              />
+            </label>
+
+            <button type="submit" class="btn">Envoyer ma demande</button>
+          </form>
+
+          <aside class="preview" aria-live="polite">
+            <h3>Ton aperçu</h3>
+            <div class="preview-plate" id="previewPlate">
+              <span class="preview-theme" id="previewTheme">Néo Tokyo</span>
+              <span class="preview-message" id="previewMessage">Ton message</span>
+            </div>
+            <ul class="preview-meta">
+              <li><strong>Taille:</strong> <span id="previewSize">60 x 40 cm</span></li>
+              <li><strong>Couleur:</strong> <span id="previewColor">#39ffb6</span></li>
+              <li><strong>Délai:</strong> 5 à 8 jours ouvrés</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Metaleks — Art métal personnalisé</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
